@@ -18,6 +18,9 @@
 		5573FB6D2DB03B2000789507 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB6C2DB03B2000789507 /* Contact.swift */; };
 		5573FB702DB03B3500789507 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB6F2DB03B3500789507 /* Address.swift */; };
 		5573FB722DB03B3E00789507 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB712DB03B3E00789507 /* Company.swift */; };
+		5573FB892DB040DA00789507 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB882DB040DA00789507 /* ContactsView.swift */; };
+		5573FB8B2DB0412900789507 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB8A2DB0412900789507 /* ContactsViewModel.swift */; };
+		5573FB8D2DB0416000789507 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB8C2DB0415F00789507 /* ContactCardView.swift */; };
 		55FF595C2DB0372A00E59F39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 55FF595B2DB0372A00E59F39 /* Kingfisher */; };
 		55FF595F2DB0377E00E59F39 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 55FF595E2DB0377E00E59F39 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		5573FB6C2DB03B2000789507 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5573FB6F2DB03B3500789507 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		5573FB712DB03B3E00789507 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		5573FB882DB040DA00789507 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		5573FB8A2DB0412900789507 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		5573FB8C2DB0415F00789507 /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
 		558D36D52DB02B4D00B8E8B7 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,9 @@
 				5573FB5E2DB03B0800789507 /* ContactsApp.xcdatamodeld */,
 				5573FB5F2DB03B0800789507 /* ContactsAppApp.swift */,
 				5573FB602DB03B0800789507 /* ContentView.swift */,
+				5573FB882DB040DA00789507 /* ContactsView.swift */,
+				5573FB8A2DB0412900789507 /* ContactsViewModel.swift */,
+				5573FB8C2DB0415F00789507 /* ContactCardView.swift */,
 				5573FB612DB03B0800789507 /* Persistence.swift */,
 			);
 			path = ContactsApp;
@@ -190,10 +199,13 @@
 				5573FB642DB03B0800789507 /* ContactsService.swift in Sources */,
 				5573FB652DB03B0800789507 /* Router.swift in Sources */,
 				5573FB722DB03B3E00789507 /* Company.swift in Sources */,
+				5573FB892DB040DA00789507 /* ContactsView.swift in Sources */,
 				5573FB662DB03B0800789507 /* ContactsApp.xcdatamodeld in Sources */,
 				5573FB672DB03B0800789507 /* ContactsAppApp.swift in Sources */,
 				5573FB682DB03B0800789507 /* ContentView.swift in Sources */,
 				5573FB692DB03B0800789507 /* Persistence.swift in Sources */,
+				5573FB8B2DB0412900789507 /* ContactsViewModel.swift in Sources */,
+				5573FB8D2DB0416000789507 /* ContactCardView.swift in Sources */,
 				5573FB702DB03B3500789507 /* Address.swift in Sources */,
 				5573FB6D2DB03B2000789507 /* Contact.swift in Sources */,
 			);

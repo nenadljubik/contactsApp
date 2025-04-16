@@ -17,6 +17,7 @@ struct ContactsView: View {
                     ContactCardView(contact: contact)
                 }
                 .animation(.easeInOut, value: viewModel.contacts)
+                .searchable(text: $viewModel.searchText, prompt: "Search Contacts")
             }
             .navigationTitle("Contacts")
         }

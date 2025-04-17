@@ -15,19 +15,7 @@ struct ContactCardView: View {
         
         VStack {
             HStack {
-                if let imageURLString = contact.imageURL,
-                   let imageURL = URL(string: imageURLString) {
-                    KFImage(imageURL)
-                        .resizable()
-                        .placeholder {
-                            ProgressView()
-                                .progressViewStyle(.circular)
-                                .tint(.black)
-                        }
-                        .frame(width: 45, height: 45)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                }
-                
+                contactImage
                 
                 VStack(alignment: .leading) {
                     Text(contact.name ?? "-")
@@ -41,5 +29,27 @@ struct ContactCardView: View {
                 Spacer()
             }
         }
+    }
+    
+    var contactImage: some View {
+        Group {
+            if let image = contact.imageURL,
+               let imageURL = URL(string: image)  {
+                KFImage(imageURL)
+                    .resizable()
+                    .placeholder {
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                            .tint(.black)
+                    }
+                
+            } else {
+                Image(.placeholderPerson)
+                    .resizable()
+                
+            }
+        }
+        .frame(width: 45, height: 45)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }

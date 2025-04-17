@@ -14,7 +14,9 @@ struct ContactsView: View {
         NavigationStack {
             VStack {
                 List($viewModel.contacts, id: \.self, editActions: .delete) { $contact in
-                    ContactCardView(contact: contact)
+                    NavigationLink(destination: ContactDetailsView(contact: contact)) {
+                        ContactCardView(contact: contact)
+                    }
                 }
                 .animation(.easeInOut, value: viewModel.contacts)
                 .searchable(text: $viewModel.searchText, prompt: "Search Contacts")

@@ -11,4 +11,9 @@ struct Address: Codable, Hashable {
     let suite: String?
     let city: String?
     let zipcode: String?
+    
+    
+    var fullAddress: String {
+        return String(format: "%@, %@, %@, %@", street ?? "", suite ?? "", city ?? "", zipcode ?? "")
+    }
 }

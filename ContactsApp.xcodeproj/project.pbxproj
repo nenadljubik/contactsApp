@@ -21,6 +21,7 @@
 		5573FB892DB040DA00789507 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB882DB040DA00789507 /* ContactsView.swift */; };
 		5573FB8B2DB0412900789507 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB8A2DB0412900789507 /* ContactsViewModel.swift */; };
 		5573FB8D2DB0416000789507 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB8C2DB0415F00789507 /* ContactCardView.swift */; };
+		558206142DB23BF500279B38 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558206132DB23BF500279B38 /* Shimmer.swift */; };
 		55D3CD692DB1343400A8DFC0 /* ContactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3CD682DB1343400A8DFC0 /* ContactDetailsView.swift */; };
 		55D3CD6D2DB13E4A00A8DFC0 /* ContactBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3CD6C2DB13E4A00A8DFC0 /* ContactBasicInfo.swift */; };
 		55D3CD6F2DB1BFFF00A8DFC0 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3CD6E2DB1BFFF00A8DFC0 /* String + Extensions.swift */; };
@@ -44,6 +45,7 @@
 		5573FB882DB040DA00789507 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		5573FB8A2DB0412900789507 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		5573FB8C2DB0415F00789507 /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		558206132DB23BF500279B38 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		558D36D52DB02B4D00B8E8B7 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D3CD682DB1343400A8DFC0 /* ContactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsView.swift; sourceTree = "<group>"; };
 		55D3CD6C2DB13E4A00A8DFC0 /* ContactBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactBasicInfo.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		5573FB622DB03B0800789507 /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				558206132DB23BF500279B38 /* Shimmer.swift */,
 				5573FB5A2DB03B0800789507 /* Networking */,
 				5573FB6E2DB03B2800789507 /* Models */,
 				5573FB5C2DB03B0800789507 /* Preview Content */,
@@ -221,6 +224,7 @@
 				5573FB692DB03B0800789507 /* Persistence.swift in Sources */,
 				55D3CD6D2DB13E4A00A8DFC0 /* ContactBasicInfo.swift in Sources */,
 				5573FB8B2DB0412900789507 /* ContactsViewModel.swift in Sources */,
+				558206142DB23BF500279B38 /* Shimmer.swift in Sources */,
 				5573FB8D2DB0416000789507 /* ContactCardView.swift in Sources */,
 				5573FB702DB03B3500789507 /* Address.swift in Sources */,
 				5573FB6D2DB03B2000789507 /* Contact.swift in Sources */,

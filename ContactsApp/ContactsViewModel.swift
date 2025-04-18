@@ -11,12 +11,18 @@ import Combine
 
 class ContactsViewModel: ObservableObject {
     
+    // Private properties
     private var allContacts: [Contact] = []
-    @Published var contacts: [Contact] = []
-    @Published var searchText: String = ""
-    
     private var cancellables: Set<AnyCancellable> = []
     
+    // Public properties
+    @Published var contacts: [Contact] = [.dummy(), .dummy(), .dummy(), .dummy()]
+    @Published var searchText: String = ""
+    
+    // Loading Flags
+    @Published var isLoading: Bool = true
+    
+
     init() {
         fetchContacts()
         setupBinding()
@@ -50,6 +56,13 @@ class ContactsViewModel: ObservableObject {
                 }
             } catch {
                 print(error)
+            }
+            
+            // Delaying ending shimmer effect
+            try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second delay
+            
+            withAnimation {
+                isLoading = false
             }
         }
     }

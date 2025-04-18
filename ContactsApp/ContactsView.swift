@@ -19,9 +19,12 @@ struct ContactsView: View {
                     }
                 }
                 .animation(.easeInOut, value: viewModel.contacts)
+                .shimmering(active: viewModel.isLoading)
+                .redacted(reason: viewModel.isLoading ? .placeholder : .init())
                 .searchable(text: $viewModel.searchText, prompt: "Search Contacts")
             }
             .navigationTitle("Contacts")
+            
         }
     }
 }

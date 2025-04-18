@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55657CC52DB2ED4700706172 /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55657CC42DB2ED4700706172 /* AppAlert.swift */; };
+		55657CC92DB2EDF100706172 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55657CC82DB2EDF100706172 /* View + Extensions.swift */; };
+		55657CCB2DB2EEE100706172 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55657CCA2DB2EEE100706172 /* NetworkMonitor.swift */; };
 		5573FB642DB03B0800789507 /* ContactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB582DB03B0800789507 /* ContactsService.swift */; };
 		5573FB652DB03B0800789507 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB592DB03B0800789507 /* Router.swift */; };
 		5573FB662DB03B0800789507 /* ContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5573FB5E2DB03B0800789507 /* ContactsApp.xcdatamodeld */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55657CC42DB2ED4700706172 /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
+		55657CC82DB2EDF100706172 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
+		55657CCA2DB2EEE100706172 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		5573FB582DB03B0800789507 /* ContactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsService.swift; sourceTree = "<group>"; };
 		5573FB592DB03B0800789507 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5573FB5B2DB03B0800789507 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -66,11 +72,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55657CCC2DB2F23900706172 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55657CC82DB2EDF100706172 /* View + Extensions.swift */,
+				55D3CD6E2DB1BFFF00A8DFC0 /* String + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55657CCD2DB2F26300706172 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				55657CC42DB2ED4700706172 /* AppAlert.swift */,
+				55D3CD6C2DB13E4A00A8DFC0 /* ContactBasicInfo.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		5573FB5A2DB03B0800789507 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				5573FB592DB03B0800789507 /* Router.swift */,
 				5573FB582DB03B0800789507 /* ContactsService.swift */,
+				55657CCA2DB2EEE100706172 /* NetworkMonitor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -89,19 +114,19 @@
 				558206132DB23BF500279B38 /* Shimmer.swift */,
 				5573FB5A2DB03B0800789507 /* Networking */,
 				5573FB6E2DB03B2800789507 /* Models */,
+				55657CCD2DB2F26300706172 /* Enums */,
+				55657CCC2DB2F23900706172 /* Extensions */,
 				5573FB5C2DB03B0800789507 /* Preview Content */,
 				5573FB5D2DB03B0800789507 /* Assets.xcassets */,
 				5573FB5E2DB03B0800789507 /* ContactsApp.xcdatamodeld */,
 				5573FB5F2DB03B0800789507 /* ContactsAppApp.swift */,
 				5573FB602DB03B0800789507 /* ContentView.swift */,
+				5573FB8C2DB0415F00789507 /* ContactCardView.swift */,
 				5573FB882DB040DA00789507 /* ContactsView.swift */,
 				5573FB8A2DB0412900789507 /* ContactsViewModel.swift */,
-				5573FB8C2DB0415F00789507 /* ContactCardView.swift */,
 				55D3CD682DB1343400A8DFC0 /* ContactDetailsView.swift */,
 				55D3CD702DB1C03500A8DFC0 /* ContactInfoView.swift */,
-				55D3CD6E2DB1BFFF00A8DFC0 /* String + Extensions.swift */,
 				5573FB612DB03B0800789507 /* Persistence.swift */,
-				55D3CD6C2DB13E4A00A8DFC0 /* ContactBasicInfo.swift */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -213,6 +238,7 @@
 			files = (
 				55D3CD692DB1343400A8DFC0 /* ContactDetailsView.swift in Sources */,
 				5573FB642DB03B0800789507 /* ContactsService.swift in Sources */,
+				55657CC52DB2ED4700706172 /* AppAlert.swift in Sources */,
 				5573FB652DB03B0800789507 /* Router.swift in Sources */,
 				55D3CD712DB1C03500A8DFC0 /* ContactInfoView.swift in Sources */,
 				5573FB722DB03B3E00789507 /* Company.swift in Sources */,
@@ -220,12 +246,14 @@
 				5573FB892DB040DA00789507 /* ContactsView.swift in Sources */,
 				5573FB662DB03B0800789507 /* ContactsApp.xcdatamodeld in Sources */,
 				5573FB672DB03B0800789507 /* ContactsAppApp.swift in Sources */,
+				55657CC92DB2EDF100706172 /* View + Extensions.swift in Sources */,
 				5573FB682DB03B0800789507 /* ContentView.swift in Sources */,
 				5573FB692DB03B0800789507 /* Persistence.swift in Sources */,
 				55D3CD6D2DB13E4A00A8DFC0 /* ContactBasicInfo.swift in Sources */,
 				5573FB8B2DB0412900789507 /* ContactsViewModel.swift in Sources */,
 				558206142DB23BF500279B38 /* Shimmer.swift in Sources */,
 				5573FB8D2DB0416000789507 /* ContactCardView.swift in Sources */,
+				55657CCB2DB2EEE100706172 /* NetworkMonitor.swift in Sources */,
 				5573FB702DB03B3500789507 /* Address.swift in Sources */,
 				5573FB6D2DB03B2000789507 /* Contact.swift in Sources */,
 			);

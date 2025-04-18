@@ -14,10 +14,14 @@ class ContactsViewModel: ObservableObject {
     // Private properties
     private var allContacts: [Contact] = []
     var cancellables: Set<AnyCancellable> = []
+    private(set) var errorMessage: String = ""
+    var networkMonitor = NetworkMonitor()
     
     // Public properties
     @Published var contacts: [Contact] = [.dummy(), .dummy(), .dummy(), .dummy()]
     @Published var searchText: String = ""
+    @Published var appAlert: AppAlert?
+    @Published var isThereLocalData: Bool = false
     
     // Loading Flags
     @Published var isLoading: Bool = true
@@ -48,6 +52,16 @@ class ContactsViewModel: ObservableObject {
     
     func fetchContacts() {
         Task { @MainActor in
+            guard networkMonitor.isConnected else {
+                appAlert = .info(title: "No Internet Connection",
+                                 message: "No internet connection available. Please check your network connectivity.",
+                                 dismissTitle: "OK",
+                                 dismissAction: nil)
+                
+                isLoading = false
+                return
+            }
+            
             do {
                 let contacts = try await ContactsService.fetchContacts()
                 
@@ -58,7 +72,7 @@ class ContactsViewModel: ObservableObject {
                 
                 contactsSubject.send(contacts)
             } catch {
-                print(error)
+                appAlert = .info(title: "Oops, something went wrong while fetching the contacts.", message: error.localizedDescription, dismissTitle: "OK", dismissAction: nil)
             }
             
             // Delaying ending shimmer effect

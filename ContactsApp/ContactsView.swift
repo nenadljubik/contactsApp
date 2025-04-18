@@ -21,11 +21,20 @@ struct ContactsView: View {
                     }
                 }
                 .animation(.easeInOut, value: viewModel.contacts)
-                .shimmering(active: viewModel.isLoading)
-                .redacted(reason: viewModel.isLoading ? .placeholder : .init())
+                .shimmering(active: viewModel.isLoading && !viewModel.isThereLocalData)
+                .redacted(reason: viewModel.isLoading && !viewModel.isThereLocalData ? .placeholder : .init())
                 .searchable(text: $viewModel.searchText, prompt: "Search Contacts")
             }
             .navigationTitle("Contacts")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    if viewModel.isLoading && viewModel.isThereLocalData{
+                        Label("Syncing...", systemImage: "arrow.triangle.2.circlepath")
+                            .labelStyle(.titleAndIcon)
+                            .foregroundColor(.gray)
+                    }
+                }
+            }
         }
         .onAppear {
             loadContactsFromCoreData()
@@ -39,6 +48,7 @@ struct ContactsView: View {
                 }
                 .store(in: &viewModel.cancellables)
         }
+        .appAlert(error: $viewModel.appAlert)
     }
     
     private func saveContactsToCoreData(_ contacts: [Contact]) {
@@ -96,6 +106,7 @@ struct ContactsView: View {
             if !contacts.isEmpty {
                 viewModel.contacts = contacts
             }
+            viewModel.isThereLocalData = !contacts.isEmpty
         } catch {
             print("Failed to fetch contacts: \(error)")
         }

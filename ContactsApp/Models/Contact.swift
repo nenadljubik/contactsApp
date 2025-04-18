@@ -24,6 +24,26 @@ struct Contact: Codable, Hashable {
 }
 
 extension Contact {
+    init(from entity: ContactEntity) {
+        self.id = Int(entity.id)
+        self.name = entity.name
+        self.username = entity.username
+        self.website = entity.website
+        self.email = entity.email
+        self.phone = entity.phone
+        self.company = entity.company.map { Company(name: $0.name, catchPhrase: $0.catchPhrase) }
+        self.address = entity.address.map {
+            Address(
+                street: $0.street,
+                suite: $0.suite,
+                city: $0.city,
+                zipcode: $0.zipcode
+            )
+        }
+    }
+}
+
+extension Contact {
     static func dummy() -> Contact {
         return .init(id: Int.random(in: 0...10),
                      name: "John Doe",

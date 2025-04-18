@@ -13,7 +13,7 @@ class ContactsViewModel: ObservableObject {
     
     // Private properties
     private var allContacts: [Contact] = []
-    private var cancellables: Set<AnyCancellable> = []
+    var cancellables: Set<AnyCancellable> = []
     
     // Public properties
     @Published var contacts: [Contact] = [.dummy(), .dummy(), .dummy(), .dummy()]
@@ -22,6 +22,7 @@ class ContactsViewModel: ObservableObject {
     // Loading Flags
     @Published var isLoading: Bool = true
     
+    var contactsSubject: PassthroughSubject<[Contact], Never> = .init()
 
     init() {
         fetchContacts()
@@ -54,6 +55,8 @@ class ContactsViewModel: ObservableObject {
                     self.allContacts = contacts
                     self.contacts = contacts
                 }
+                
+                contactsSubject.send(contacts)
             } catch {
                 print(error)
             }

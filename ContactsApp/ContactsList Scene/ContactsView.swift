@@ -24,6 +24,13 @@ struct ContactsView: View {
                 .shimmering(active: viewModel.isLoading && !viewModel.isThereLocalData)
                 .redacted(reason: viewModel.isLoading && !viewModel.isThereLocalData ? .placeholder : .init())
                 .searchable(text: $viewModel.searchText, prompt: "Search Contacts")
+                .refreshable {
+                    withAnimation {
+                        viewModel.isThereLocalData = false
+                        viewModel.isLoading = true
+                    }
+                    viewModel.fetchContacts()
+                }
             }
             .navigationTitle("Contacts")
             .toolbar {

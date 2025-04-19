@@ -72,6 +72,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55582AE62DB3C65B00BE4F72 /* ContactsList Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5573FB882DB040DA00789507 /* ContactsView.swift */,
+				5573FB8A2DB0412900789507 /* ContactsViewModel.swift */,
+				5573FB8C2DB0415F00789507 /* ContactCardView.swift */,
+			);
+			path = "ContactsList Scene";
+			sourceTree = "<group>";
+		};
+		55582AE72DB3C6DC00BE4F72 /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				5573FB5E2DB03B0800789507 /* ContactsApp.xcdatamodeld */,
+				5573FB612DB03B0800789507 /* Persistence.swift */,
+			);
+			path = "Data Persistence";
+			sourceTree = "<group>";
+		};
+		55582AE82DB3C7F700BE4F72 /* ContactDetails Scene */ = {
+			isa = PBXGroup;
+			children = (
+				55D3CD682DB1343400A8DFC0 /* ContactDetailsView.swift */,
+				55D3CD702DB1C03500A8DFC0 /* ContactInfoView.swift */,
+			);
+			path = "ContactDetails Scene";
+			sourceTree = "<group>";
+		};
+		55582AE92DB3C8C000BE4F72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				558206132DB23BF500279B38 /* Shimmer.swift */,
+				5573FB5D2DB03B0800789507 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		55657CCC2DB2F23900706172 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,22 +148,15 @@
 		5573FB622DB03B0800789507 /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				558206132DB23BF500279B38 /* Shimmer.swift */,
 				5573FB5A2DB03B0800789507 /* Networking */,
 				5573FB6E2DB03B2800789507 /* Models */,
 				55657CCD2DB2F26300706172 /* Enums */,
 				55657CCC2DB2F23900706172 /* Extensions */,
+				55582AE72DB3C6DC00BE4F72 /* Data Persistence */,
+				55582AE92DB3C8C000BE4F72 /* Supporting Files */,
 				5573FB5C2DB03B0800789507 /* Preview Content */,
-				5573FB5D2DB03B0800789507 /* Assets.xcassets */,
-				5573FB5E2DB03B0800789507 /* ContactsApp.xcdatamodeld */,
-				5573FB5F2DB03B0800789507 /* ContactsAppApp.swift */,
-				5573FB602DB03B0800789507 /* ContentView.swift */,
-				5573FB8C2DB0415F00789507 /* ContactCardView.swift */,
-				5573FB882DB040DA00789507 /* ContactsView.swift */,
-				5573FB8A2DB0412900789507 /* ContactsViewModel.swift */,
-				55D3CD682DB1343400A8DFC0 /* ContactDetailsView.swift */,
-				55D3CD702DB1C03500A8DFC0 /* ContactInfoView.swift */,
-				5573FB612DB03B0800789507 /* Persistence.swift */,
+				55582AE62DB3C65B00BE4F72 /* ContactsList Scene */,
+				55582AE82DB3C7F700BE4F72 /* ContactDetails Scene */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -145,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				5573FB622DB03B0800789507 /* ContactsApp */,
+				5573FB602DB03B0800789507 /* ContentView.swift */,
+				5573FB5F2DB03B0800789507 /* ContactsAppApp.swift */,
 				558D36D62DB02B4D00B8E8B7 /* Products */,
 			);
 			sourceTree = "<group>";
